@@ -1,0 +1,14 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/campaigns/{{ campaignId }}/{{ visitId }}"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Cuestionario 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <app-json-form [jsonFormData]="formData"></app-json-form>
+</ion-content>

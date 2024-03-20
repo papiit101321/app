@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/campaigns"></ion-back-button>
+    </ion-buttons>
+    <ion-title> {{ campaign.title }}  </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="deleteCampaign()" >
+        <ion-icon name="trash"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col class="ion-no-padding">
+        <ion-img [src]="campaign.imageURL"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h1 class="ion-text-center"> {{ campaign.title }} </h1>
+        <p class="ion-text-center"> {{campaign.date_start}} - {{ campaign.date_end }}</p>
+        <p class="ion-text-center"> {{campaign.people_on_charge}}</p>
+        <p class="ion-text-center"> {{campaign.resume}}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item *ngFor='let visit of visits' [routerLink]="['/campaigns',campaign.id,visit.id]">
+          <ion-avatar slot="start" *ngIf="visit.photos && visit.photos.length > 0; else noPhoto">
+          <ion-img [src]="visit.photos[0]"></ion-img>
+          </ion-avatar>
+          <ng-template #noPhoto>
+            <ion-icon name="home"></ion-icon>
+          </ng-template>
+          <ion-title>{{ visit.title }}</ion-title>
+          </ion-item>
+          </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addNewVisit()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

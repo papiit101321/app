@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/campaigns"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Nueva Campaña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-row>
+  <ion-col>
+    <ion-card>
+      <ion-card-content>
+        <ion-input type="text" placeholder="Título" #title>
+        </ion-input>
+        <ion-input type="text" placeholder="Clave" #code>
+        </ion-input>
+
+        <ion-input type="text" placeholder="Resumen" #resume>
+        </ion-input>
+        <ion-input type="text" placeholder="URL de imagen" #imgURL>
+        </ion-input>
+        <ion-input type="text" placeholder="Fecha de inicio" #date_start>
+        </ion-input>
+        <ion-input type="text" placeholder="Fecha final" #date_end>
+        </ion-input>
+        <ion-input type="text" placeholder="Persona encargada" #people_on_charge>
+        </ion-input>
+
+
+        <ion-button (click)="saveNewCampaign(title,code,resume,imgURL,date_start,date_end,people_on_charge)">Guardar</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </ion-col>
+</ion-row>
+
+</ion-content>

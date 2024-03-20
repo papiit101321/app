@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/campaigns/{{ campaignId }}"></ion-back-button>
+    </ion-buttons>
+    <ion-title>[{{campaign.key}}] {{campaign.title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-card-content>
+          <h1>Nueva Visita</h1>
+          
+          <ion-input type="text" placeholder="Título" #title></ion-input>
+          <ion-input type="text" placeholder="Clave" #code></ion-input>          
+          <ion-input type="text" placeholder="Fecha de visita" #date></ion-input>
+          <ion-input type="text" placeholder="Persona encargada" #people_on_charge></ion-input>
+          <ion-button (click)="saveNewVisit(title,code,date,people_on_charge)">Guardar</ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "campaign3",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
