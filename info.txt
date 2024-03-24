@@ -1,4 +1,4 @@
-campaign3@0.0.1 /home/vdelaluz/git/campaign3
+campaign3@0.0.1 /home/nsalazar/git/campaign3
 ├── UNMET PEER DEPENDENCY @angular-devkit/architect@^0.1200.0
 ├─┬ @angular-devkit/build-angular@12.1.4
 │ ├─┬ @angular-devkit/architect@0.1201.4
